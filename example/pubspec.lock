@@ -105,9 +105,9 @@ packages:
   image_picker_form_field:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      name: image_picker_form_field
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   image_picker_platform_interface:
     dependency: transitive
