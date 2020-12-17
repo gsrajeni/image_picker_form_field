@@ -7,8 +7,6 @@ import 'package:image_picker/image_picker.dart';
 import 'ImageSourceSelectionDialog.dart';
 
 class ImagePickerFormField extends FormField<File> {
-  String label;
-  Color borderColor;
   bool previewEnabled = true;
   Widget child;
   ImagePickerFormField(
@@ -17,10 +15,8 @@ class ImagePickerFormField extends FormField<File> {
       FormFieldValidator<File> validator,
       File initialValue,
       bool autovalidate = false,
-      this.label,
       this.previewEnabled = true,
-      @required this.child,
-      this.borderColor = Colors.grey})
+      @required this.child})
       : super(
             onSaved: onSaved,
             validator: validator,

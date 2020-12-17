@@ -1,7 +1,6 @@
 name: image_picker_form_field
 description: Customized Image picker plugin for form field.
 version: 0.0.1
-author:
 repository: https://github.com/gsrajeni/image_picker_form_field.git
 
 environment:

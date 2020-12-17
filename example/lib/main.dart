@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker_form_field/image_picker_form_field.dart';
 
@@ -14,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   GlobalKey<FormState> key = GlobalKey<FormState>();
+
   @override
   void initState() {
     super.initState();
@@ -45,18 +48,16 @@ class _MyAppState extends State<MyApp> {
                   previewEnabled: true,
                   autovalidate: true,
                   context: context,
-                  onSaved: (value) {
+                  onSaved: (File value) {
                     print("on saved called");
                   },
-                  validator: (value) {
+                  validator: (File value) {
                     if (value == null)
                       return "Please select a photo!";
                     else
                       return null;
                   },
                   initialValue: null, //File("some source")
-                  label: "Select a photo",
-                  borderColor: Colors.grey,
                 ),
               ),
             ),
